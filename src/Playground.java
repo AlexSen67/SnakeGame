@@ -51,7 +51,7 @@ public class Playground extends JPanel implements ActionListener, KeyListener{
 
 
         //Apple
-        apple = new Square(10, 10);
+        apple = new Square(15, 20);
         randomApple(); //Random apple position
 
         this.timer = new Timer(1000/10, this);//10 frames per second
@@ -70,14 +70,14 @@ public class Playground extends JPanel implements ActionListener, KeyListener{
     }
     public void draw(Graphics g){
         //Grid  
-        for(int i = 0; i < boardWidth/snakePartSize; i++){
+        /*for(int i = 0; i < boardWidth/snakePartSize; i++){
             g.drawLine(i*snakePartSize, 0, i*snakePartSize, boardHeight);
             g.drawLine(0, i*snakePartSize, boardWidth, i*snakePartSize);
 
-        }
+        }*/
 
         //Snake Head
-        g.setColor(Color.GREEN);
+        g.setColor(Color.WHITE);
         g.fillRect(snakeHead.x * snakePartSize, snakeHead.y * snakePartSize, snakePartSize, snakePartSize);
         
         //Apple
@@ -174,8 +174,6 @@ public class Playground extends JPanel implements ActionListener, KeyListener{
     public void keyReleased(KeyEvent e) {
        
     }
-
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
