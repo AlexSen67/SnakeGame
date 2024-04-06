@@ -76,17 +76,13 @@ public class Playground extends JPanel implements ActionListener, KeyListener{
 
         }*/
 
-        //Snake Head
-        g.setColor(Color.WHITE);
-        g.fillRect(snakeHead.x * snakePartSize, snakeHead.y * snakePartSize, snakePartSize, snakePartSize);
-        
         //Apple
         g.setColor(Color.RED);
         g.fillRect(apple.x * snakePartSize, apple.y * snakePartSize, snakePartSize, snakePartSize);
 
         //Draw each part of the snake
         for(Square part : snakeBody){
-            g.setColor(Color.GREEN);
+            g.setColor(Color.WHITE);
             g.fillRect(part.x * snakePartSize, part.y * snakePartSize, snakePartSize, snakePartSize);
         }
     }
